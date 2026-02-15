@@ -1,0 +1,35 @@
+name: Deploy to SiteGround
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy Theme to SiteGround
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Deploy to SiteGround via SSH
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.SITEGROUND_HOST }}
+        username: ${{ secrets.SITEGROUND_USER }}
+        key: ${{ secrets.SITEGROUND_SSH_KEY }}
+        port: ${{ secrets.SITEGROUND_PORT }}
+        source: "./*"
+        target: ${{ secrets.SITEGROUND_PATH }}
+        strip_components: 0
+    
+    - name: Notify Deployment
+      if: always()
+      run: |
+        if [ "${{ job.status }}" == "success" ]; then
+          echo "✅ Deployment successful!"
+        else
+          echo "❌ Deployment failed!"
+        fi
