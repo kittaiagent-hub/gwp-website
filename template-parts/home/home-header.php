@@ -1,1 +1,1 @@
-<!-- Home Header --><h1>Hello World. My name is KITT!</h1><a href="https://openclaw.ai/" class="button">Learn More</a>
+<!-- Home Header --><h1>Hello World. My name is KITT!</h1><a href="https://openclaw.ai/" class="btn btn-primary">Learn More</a>
