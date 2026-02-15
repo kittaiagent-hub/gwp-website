@@ -1,0 +1,227 @@
+/*
+Theme Name: GWP Inc.
+Author: GWP Inc.
+Description: GWP Inc. Child Theme
+Version: 1.0
+Template: bootstrap-component-blox
+*/
+
+:root {
+	--gwp-primary: ;
+	--gwp-secondary: ;
+	--gwp-dark: #000;
+	--gwp-font: 'Poppins', sans-serif;
+}
+
+/* ===== Global ===== */
+
+html,
+body { 
+	overflow-x: hidden;
+	font-family: var(--gwp-font);
+	color: var(--gwp-dark);
+}
+
+a,
+a:hover {
+	text-decoration: none;
+}
+
+/* ===== Custom Classes ===== */
+
+.z-front {
+	z-index: 5;
+}
+
+.z-back {
+	z-index: 1;
+}
+
+.fw-600 {
+	font-weight: 600;
+}
+
+/* ===== Text Color ===== */
+
+.gwp-text-primary {
+	color: var(--gwp-primary);
+}
+
+.gwp-text-secondary {
+	color: var(--gwp-secondary);
+}
+
+.gwp-text-dark {
+	color: var(--gwp-dark);
+}
+
+/* ===== Background Color ===== */
+
+.gwp-bg-primary {
+	background-color: var(--gwp-primary);
+}
+
+.gwp-bg-secondary {
+	background-color: var(--gwp-secondary);
+}
+
+.gwp-bg-dark {
+	background-color: var(--gwp-dark);
+}
+
+/* ===== Button ===== */
+
+.btn {
+	font-weight: 600;
+	border-radius: 3px;
+	padding: 10px 25px;
+	text-transform: uppercase;
+}
+
+.gwp-btn-primary {
+	background-color: var(--gwp-primary);
+	color: #fff;
+}
+
+.gwp-btn-primary:hover {
+	background-color: var(--gwp-primary);
+	color: #fff;
+	opacity: .8
+}
+
+.gwp-btn-secondary {
+	background-color: var(--gwp-secondary);
+	color: #fff;
+}
+
+.gwp-btn-secondary:hover {
+	background-color: var(--gwp-secondary);
+	color: #fff;
+	opacity: .8
+}
+
+.gwp-btn-dark {
+	background-color: var(--gwp-dark);
+	color: #fff;
+}
+
+.gwp-btn-dark:hover {
+	background-color: var(--gwp-dark);
+	color: #fff;
+	opacity: .8
+}
+
+/* ===== Navbar ===== */
+
+#navbar-main-menu .nav-link {
+	color: var(--gwp-dark);
+	text-transform: uppercase;
+}
+
+
+/* ===== Toggler ===== */
+
+#toggler:focus, 
+#toggler:active {
+    outline: 0;
+}
+
+#toggler span {
+    width: 30px;
+    height: 3px;
+    display: block;
+    background-color: var(--gwp-dark);
+    margin: 7px 0;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+#toggler span:nth-child(1) {
+    -webkit-transform: translatey(10px) rotate(-45deg);
+        -ms-transform: translatey(10px) rotate(-45deg);
+            transform: translatey(10px) rotate(-45deg);
+}
+
+#toggler span:nth-child(2) {
+    opacity: 1;
+    width: 0;
+}
+
+#toggler span:nth-child(3) {
+    -webkit-transform: translatey(-10px) rotate(45deg);
+        -ms-transform: translatey(-10px) rotate(45deg);
+            transform: translatey(-10px) rotate(45deg);  
+}
+
+#toggler.collapsed span {
+    -webkit-transform: translatey(0) rotate(0deg);
+        -ms-transform: translatey(0) rotate(0deg);
+            transform: translatey(0) rotate(0deg);
+    opacity: 1;
+    width: 30px;   
+}
+
+/* ===== Header ===== */
+
+#gwp-header .row {
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+
+/* ===== Has Form ===== */
+
+.has-form .wpforms-container {
+	margin-bottom: 0!important;
+	margin-top: 0!important;
+}
+
+.has-form .wpforms-submit {
+	color: #fff!important;
+	background: var(--gwp-primary)!important;
+	padding: 10px 20px!important;
+	text-transform: uppercase!important;
+	border: none!important;
+	font-weight: bold!important;
+}
+
+/* ===== Footer ===== */
+
+#footer-widgets {
+	background: var(--gwp-dark);
+	color: #fff;
+}
+
+#footer-widgets a {	
+	color: #fff;
+}
+
+#footer-widgets a:hover {	
+	color: rgba(255,255,255,0.8);
+}
+
+#footer-widgets .row {
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+footer {	
+	background: var(--gwp-dark);
+	color: #fff;
+}
+
+footer a {
+	color: rgba(255,255,255,0.8);
+}
+
+footer a:hover {
+	color: rgba(255,255,255,0.6);
+}
+
+
+@media (max-width: 992px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {}
